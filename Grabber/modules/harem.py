@@ -17,9 +17,9 @@ async def harem(update: Update, context: CallbackContext, page=0) -> None:
     user = await user_collection.find_one({'id': user_id})
     if not user:
         if update.message:
-            await update.message.reply_text('You Have Not Gpt any Slave Yet..')
+            await update.message.reply_text('𝙔𝙤𝙪 𝙃𝙖𝙫𝙚 𝙉𝙤𝙩 𝙂𝙧𝙖𝙗 𝙖𝙣𝙮 𝙒𝙖𝙞𝙛𝙪 𝙔𝙚𝙩...')
         else:
-            await update.callback_query.edit_message_text('You Have Not Gpt any Slave Yet..')
+            await update.callback_query.edit_message_text('𝙔𝙤𝙪 𝙃𝙖𝙫𝙚 𝙉𝙤𝙩 𝙂𝙧𝙖𝙗 𝙖𝙣𝙮 𝙒𝙖𝙞𝙛𝙪 𝙔𝙚𝙩...')
         return
 
     characters = sorted(user['characters'], key=lambda x: (x['anime'], x['id']))
@@ -44,7 +44,7 @@ async def harem(update: Update, context: CallbackContext, page=0) -> None:
     current_grouped_characters = {k: list(v) for k, v in groupby(current_characters, key=lambda x: x['anime'])}
 
     for anime, characters in current_grouped_characters.items():
-        harem_message += f'\n✳️<b>{anime} {len(characters)}/{await collection.count_documents({"anime": anime})}</b>\n'
+        harem_message += f'\n🍥<b>{anime} {len(characters)}/{await collection.count_documents({"anime": anime})}</b>\n'
 
         for character in characters:
             
