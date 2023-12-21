@@ -21,7 +21,7 @@ sudo_users = ["1375777824", "6642960731", "5827485348", "1669380723", "589280826
 GROUP_ID = "-1002029882944"
 TOKEN = "6714477044:AAFSHwO-kEhB8-ljjvBg0AXFgxDr_kWtIR8"
 mongo_url = "mongodb+srv://freepremiumy50:x119eJ2WE6lOyLZD@cluster0.qwcdkrj.mongodb.net/?retryWrites=true&w=majority"
-PHOTO_URL = ["https://graph.org/file/41c31b516e9d4236eb234.jpg"]
+PHOTO_URL = ["https://graph.org/file/f7d332878278443e9dae5.jpg"]
 SUPPORT_CHAT = "Grabers_World"
 UPDATE_CHAT = "Grabers_World"
 BOT_USERNAME = "WaifuXBharatBot"
