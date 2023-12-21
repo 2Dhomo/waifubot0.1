@@ -11,7 +11,7 @@ from Grabber import Grabberu
 
 pending_gifts = {}
 
-@shivuu.on_message(filters.command("give"))
+@Grabberu.on_message(filters.command("give"))
 async def gift(client, message):
     sender_id = message.from_user.id
 
