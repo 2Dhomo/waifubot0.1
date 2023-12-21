@@ -33,7 +33,7 @@ img_url character-name anime-name rarity-number
 
 use rarity number accordingly rarity Map
 
-rarity_map = 1 (⚪️ Common), 2 (🟣 Rare) , 3 (🟡 Legendary), 4 (🟢 Medium)""")
+rarity_map = 1 (🔵 common), 2 (🔴 medium) , 3 (🟠 rare), 4 (🟡 Legendary), 5 (🍥 Unique), 6 (🔮 Special)""")
 
             
             return
@@ -47,7 +47,7 @@ rarity_map = 1 (⚪️ Common), 2 (🟣 Rare) , 3 (🟡 Legendary), 4 (🟢 Medi
             await update.message.reply_text('Invalid URL.')
             return
 
-        rarity_map = {1: "🔵 LOW", 2: "🟢 MEDIUM", 3: "🔴 HIGH", 4: "🟡 NOBEL", 5: "🔮 NUDES", 6: "🥵 LIMITED"}
+        rarity_map = {1: "🔵 common", 2: "🔴 medium", 3: "🟠 rare", 4: "🟡 Legendary", 5: "🍥 Unique", 6: "🔮 Special"}
         try:
             rarity = rarity_map[int(args[3])]
         except KeyError:
@@ -67,7 +67,7 @@ rarity_map = 1 (⚪️ Common), 2 (🟣 Rare) , 3 (🟡 Legendary), 4 (🟢 Medi
         message = await context.bot.send_photo(
             chat_id=CHARA_CHANNEL_ID,
             photo=args[0],
-            caption=f'<b>Slave Name:</b> {character_name}\n<b>Anime Name:</b> {anime}\n<b>Quality:</b> {rarity}\n<b>ID:</b> {id}\nAdded by <a href="tg://user?id={update.effective_user.id}">{update.effective_user.first_name}</a>',
+            caption=f'<b>Waifu Name:</b> {character_name}\n<b>Anime Name:</b> {anime}\n<b>Quality:</b> {rarity}\n<b>ID:</b> {id}\nAdded by <a href="tg://user?id={update.effective_user.id}">{update.effective_user.first_name}</a>',
             parse_mode='HTML'
         )
 
@@ -75,7 +75,7 @@ rarity_map = 1 (⚪️ Common), 2 (🟣 Rare) , 3 (🟡 Legendary), 4 (🟢 Medi
         await collection.insert_one(character)
 
 
-        await update.message.reply_text('slave ADDED....')
+        await update.message.reply_text('WAIFU ADDED....')
     except Exception as e:
         await update.message.reply_text(f'Unsuccessfully uploaded. Error: {str(e)}')
 
@@ -129,11 +129,11 @@ async def update(update: Update, context: CallbackContext) -> None:
         if args[1] in ['name', 'anime']:
             new_value = args[2].replace('-', ' ').title()
         elif args[1] == 'rarity':
-            rarity_map = {1: "🔵 LOW", 2: "🟢 MEDIUM", 3: "🔴 HIGH", 4: "🟡 NOBEL", 5: "🔮 NUDES", 6: "🥵 LIMITED"}
+            rarity_map = {1: "🔵 common", 2: "🔴 medium", 3: "🟠 rare", 4: "🟡 Legendary", 5: "🍥 Unique", 6: "🔮 Special"}
             try:
                 new_value = rarity_map[int(args[2])]
             except KeyError:
-                await update.message.reply_text('Invalid rarity. Please use 1, 2, 3, 4, or 5.')
+                await update.message.reply_text('Invalid rarity. Please use 1, 2, 3, 4, 5, or 6.')
                 return
         else:
             new_value = args[2]
