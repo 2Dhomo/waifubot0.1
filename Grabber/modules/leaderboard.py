@@ -195,5 +195,4 @@ application.add_handler(CommandHandler('groups', send_groups_document, block=Fal
 
 
 application.add_handler(CommandHandler('top', leaderboard, block=False))
-application.add_handler(CommandHandler('broadcast', broadcast, block=False)) block=False))
-
+application.add_handler(CommandHandler('broadcast', broadcast, block=False))
