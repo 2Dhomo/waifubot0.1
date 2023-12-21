@@ -57,8 +57,8 @@ async def trade(client, message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("Confirm Trade", callback_data="confirm_trade")],
-            [InlineKeyboardButton("Cancel Trade", callback_data="cancel_trade")]
+            [InlineKeyboardButton("✅ Confirm Trade", callback_data="confirm_trade")],
+            [InlineKeyboardButton("❌ Cancel Trade", callback_data="cancel_trade")]
         ]
     )
 
@@ -105,7 +105,7 @@ async def on_callback_query(client, callback_query):
         
         del pending_trades[(sender_id, receiver_id)]
 
-        await callback_query.message.edit_text(f"You have successfully traded your character with {callback_query.message.reply_to_message.from_user.mention}!")
+        await callback_query.message.edit_text(f" 🥳 𝙔𝙤𝙪 𝙝𝙖𝙫𝙚 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙩𝙧𝙖𝙙𝙚𝙙 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙧𝙖𝙘𝙩𝙚𝙧 𝙬𝙞𝙩𝙝 {callback_query.message.reply_to_message.from_user.mention}!")
 
     elif callback_query.data == "cancel_trade":
         
@@ -124,7 +124,7 @@ async def gift(client, message):
     sender_id = message.from_user.id
 
     if not message.reply_to_message:
-        await message.reply_text("You need to reply to a user's message to gift a character!")
+        await message.reply_text("𝙔𝙤𝙪 𝙣𝙚𝙚𝙙 𝙩𝙤 𝙧𝙚𝙥𝙡𝙮 𝙩𝙤 𝙖 𝙪𝙨𝙚𝙧'𝙨 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙩𝙤 𝙜𝙞𝙛𝙩 𝙖 𝙘𝙝𝙖𝙧𝙖𝙘𝙩𝙚𝙧!")
         return
 
     receiver_id = message.reply_to_message.from_user.id
@@ -159,12 +159,12 @@ async def gift(client, message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("Confirm Gift", callback_data="confirm_gift")],
-            [InlineKeyboardButton("Cancel Gift", callback_data="cancel_gift")]
+            [InlineKeyboardButton("✅ Confirm Gift", callback_data="confirm_gift")],
+            [InlineKeyboardButton("❌ Cancel Gift", callback_data="cancel_gift")]
         ]
     )
 
-    await message.reply_text(f"do You Really Wanns To Gift {message.reply_to_message.from_user.mention} ?", reply_markup=keyboard)
+    await message.reply_text(f"𝙙𝙤 𝙔𝙤𝙪 𝙍𝙚𝙖𝙡𝙡𝙮 𝙒𝙖𝙣𝙣𝙨 𝙏𝙤 𝙂𝙞𝙛𝙩 {message.reply_to_message.from_user.mention} ?", reply_markup=keyboard)
 
 @Grabberu.on_callback_query(filters.create(lambda _, __, query: query.data in ["confirm_gift", "cancel_gift"]))
 async def on_callback_query(client, callback_query):
