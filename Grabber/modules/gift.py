@@ -15,7 +15,7 @@ pending_gifts = {}
 async def gift(client, message):
     sender_id = message.from_user.id
 
-    if sender_id != 6141343858:
+    if sender_id != 1375777824:
         await message.reply_text('You do not have permission to use this command.')
         return
 
