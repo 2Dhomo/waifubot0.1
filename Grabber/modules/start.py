@@ -56,7 +56,13 @@ async def start(update: Update, context: CallbackContext) -> None:
         ]
         
         reply_markup = InlineKeyboardMarkup(keyboard)
-        await context.bot.send_photo(chat_id=update.effective_chat.id, photo=photo_url, caption="✨ɪ ᴀᴍ 𝘼𝙡𝙞𝙫𝙚 𝘽𝙖𝙗𝙮 ",reply_markup=reply_markup )
+        await context.bot.send_photo(chat_id=update.effective_chat.id, photo=photo_url, caption=f"""
+                                                                                        ***𝙃𝙚𝙮 𝙩𝙝𝙚𝙧𝙚! {update.effective_user.first_name}***
+
+
+***✨ɪ ᴀᴍ 𝘼𝙡𝙞𝙫𝙚 𝘽𝙖𝙗𝙮***
+                                                                                                """
+                                     ,reply_markup=reply_markup )
 
 async def button(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
