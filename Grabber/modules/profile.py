@@ -66,7 +66,7 @@ async def info_func(_, message: Message):
         info_text, photo_id = await get_user_info(user)
     except Exception as e:
         print(f"kela hua kela {e}")
-        return await m.edit("Sorry something Went Wrong Report At @Grabers_World")
+        return await m.edit("𝙎𝙤𝙧𝙧𝙮 𝙨𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙒𝙚𝙣𝙩 𝙒𝙧𝙤𝙣𝙜 𝙍𝙚𝙥𝙤𝙧𝙩 𝘼𝙩 @Grabers_World")
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("sᴇᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ", switch_inline_query_current_chat=f"collection.{user}")],
         [InlineKeyboardButton("🚮", callback_data="delete_message")]
