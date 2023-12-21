@@ -19,7 +19,7 @@ async def harem(update: Update, context: CallbackContext, page=0) -> None:
         if update.message:
             await update.message.reply_text('You Have Not Gpt any Slave Yet..')
         else:
-            await update.callback_query.edit_message_text(You Have Not Gpt any Slave Yet..')
+            await update.callback_query.edit_message_text('You Have Not Gpt any Slave Yet..')
         return
 
     characters = sorted(user['characters'], key=lambda x: (x['anime'], x['id']))
