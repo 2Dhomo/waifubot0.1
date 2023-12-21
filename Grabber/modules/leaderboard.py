@@ -11,6 +11,7 @@ from Grabber import (application, PHOTO_URL, OWNER_ID,
 
 from Grabber import sudo_users as SUDO_USERS 
 
+photo = ["https://graph.org/file/dde34765509593df9cd53.jpg"]
     
 async def global_leaderboard(update: Update, context: CallbackContext) -> None:
     
@@ -32,7 +33,7 @@ async def global_leaderboard(update: Update, context: CallbackContext) -> None:
         leaderboard_message += f'{i}. <b>{group_name}</b> ➾ <b>{count}</b>\n'
     
     
-    photo_url = random.choice(PHOTO_URL)
+    photo_url = random.choice(photo)
 
     await update.message.reply_photo(photo=photo_url, caption=leaderboard_message, parse_mode='HTML')
 
@@ -58,7 +59,7 @@ async def ctop(update: Update, context: CallbackContext) -> None:
         character_count = user['character_count']
         leaderboard_message += f'{i}. <a href="https://t.me/{username}"><b>{first_name}</b></a> ➾ <b>{character_count}</b>\n'
     
-    photo_url = random.choice(PHOTO_URL)
+    photo_url = random.choice(photo)
 
     await update.message.reply_photo(photo=photo_url, caption=leaderboard_message, parse_mode='HTML')
 
@@ -83,7 +84,7 @@ async def leaderboard(update: Update, context: CallbackContext) -> None:
         character_count = user['character_count']
         leaderboard_message += f'{i}. <a href="https://t.me/{username}"><b>{first_name}</b></a> ➾ <b>{character_count}</b>\n'
     
-    photo_url = random.choice(PHOTO_URL)
+    photo_url = random.choice(photo)
 
     await update.message.reply_photo(photo=photo_url, caption=leaderboard_message, parse_mode='HTML')
 
@@ -194,5 +195,5 @@ application.add_handler(CommandHandler('groups', send_groups_document, block=Fal
 
 
 application.add_handler(CommandHandler('top', leaderboard, block=False))
-application.add_handler(CommandHandler('broadcast', broadcast, block=False))
+application.add_handler(CommandHandler('broadcast', broadcast, block=False)) block=False))
 
