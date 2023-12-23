@@ -1,4 +1,3 @@
-import asyncio
 import re
 import time
 from html import escape
@@ -71,7 +70,7 @@ async def inlinequery(update: Update, context: CallbackContext) -> None:
 
         await update.inline_query.answer(results, next_offset=next_offset, cache_time=5)
 
- except Exception as e:
+except Exception as e:
         # Log the exception or handle it accordingly
         print(f"Error: {e}")
 
