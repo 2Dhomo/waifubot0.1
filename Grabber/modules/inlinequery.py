@@ -69,7 +69,7 @@ async def inlinequery(update: Update, context: CallbackContext) -> None:
                 )
             )
 
-          await update.inline_query.answer(results, next_offset=next_offset, cache_time=5)
+        await update.inline_query.answer(results, next_offset=next_offset, cache_time=5)
 
     except Exception as e:
         # Log the exception or handle it accordingly
