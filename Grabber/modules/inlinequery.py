@@ -1,3 +1,4 @@
+import asyncio
 import re
 import time
 from html import escape
@@ -68,10 +69,15 @@ async def inlinequery(update: Update, context: CallbackContext) -> None:
                 )
             )
 
-        await update.inline_query.answer(results, next_offset=next_offset, cache_time=5)
+          await update.inline_query.answer(results, next_offset=next_offset, cache_time=5)
 
     except Exception as e:
         # Log the exception or handle it accordingly
         print(f"Error: {e}")
 
-application.add_handler(InlineQueryHandler(inlinequery, run_async=True, pass_update_queue=True))
+def inlinequery_handler(update: Update, context: CallbackContext) -> None:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(inlinequery(update, context))
+
+application.add_handler(InlineQueryHandler(inlinequery_handler))
