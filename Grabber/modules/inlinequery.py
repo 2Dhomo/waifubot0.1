@@ -71,13 +71,11 @@ async def inlinequery(update: Update, context: CallbackContext) -> None:
 
         await update.inline_query.answer(results, next_offset=next_offset, cache_time=5)
 
-    except Exception as e:
+ except Exception as e:
         # Log the exception or handle it accordingly
         print(f"Error: {e}")
 
-def inlinequery_handler(update: Update, context: CallbackContext) -> None:
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    loop.run_until_complete(inlinequery(update, context))
+async def inlinequery_handler(update: Update, context: CallbackContext) -> None:
+    await inlinequery(update, context)
 
 application.add_handler(InlineQueryHandler(inlinequery_handler))
