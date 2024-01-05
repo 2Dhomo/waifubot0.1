@@ -1,7 +1,7 @@
 from pymongo import ReturnDocument
 from telegram import Update
 from telegram.ext import CommandHandler, CallbackContext
-from shivu import application, OWNER_ID, user_totals_collection
+from Grabber import application, OWNER_ID, user_totals_collection
 
 async def change_time(update: Update, context: CallbackContext) -> None:
     user = update.effective_user
