@@ -4,7 +4,7 @@ import asyncio
 from Grabber import Grabberu as app
 from Grabber import sudo_users
 
-DEV_LIST = [6310231416, 6890857225]
+DEV_LIST = [1005344893]
 
 async def give_character(receiver_id, character_id):
     character = await collection.find_one({'id': character_id})
