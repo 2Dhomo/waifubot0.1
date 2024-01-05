@@ -37,7 +37,7 @@ async def start(update: Update, context: CallbackContext) -> None:
 ***ɪ ᴀᴍ 𝙒𝘼𝙄𝙁𝙐 𝙂𝙍𝘼𝘽 𝘽𝙊𝙏 ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜ'ʀᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ᴛᴀᴘ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅS***
                """
         keyboard = [
-            [InlineKeyboardButton("Add Me", url=f'https://t.me/WaifuCatherRobot?startgroup=new')],
+            [InlineKeyboardButton("Add Me", url=f'https://t.me/WaifuGrabberRobot?startgroup=new')],
             [InlineKeyboardButton("Help", callback_data='help'),
              InlineKeyboardButton("Support", url=f'https://t.me/{SUPPORT_CHAT}')],
         ]
@@ -95,7 +95,7 @@ async def button(update: Update, context: CallbackContext) -> None:
 ***ɪ ᴀᴍ 𝙒𝘼𝙄𝙁𝙐 𝙂𝙍𝘼𝘽 𝘽𝙊𝙏 ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜ'ʀᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ᴛᴀᴘ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ***
         """
         keyboard = [
-            [InlineKeyboardButton("Add Me", url=f'https://t.me/WaifuCatherRobot?startgroup=new')],
+            [InlineKeyboardButton("Add Me", url=f'https://t.me/WaifuGrabberRobot?startgroup=new')],
             [InlineKeyboardButton("Help", callback_data='help'),
              InlineKeyboardButton("Support", url=f'https://t.me/{SUPPORT_CHAT}')],
         ]
