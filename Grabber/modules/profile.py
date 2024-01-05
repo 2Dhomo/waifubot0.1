@@ -56,7 +56,7 @@ async def get_user_info(user, already=False):
         )
      
     return [info_text, photo_id]
-@app.on_message(filters.command("sinfo"))
+@app.on_message(filters.command("info"))
 async def info_func(_, message: Message):
     if message.reply_to_message:
         user = message.reply_to_message.from_user.id
