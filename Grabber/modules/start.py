@@ -51,7 +51,7 @@ async def start(update: Update, context: CallbackContext) -> None:
         keyboard = [
             
             [InlineKeyboardButton("Help", callback_data='help'),
-             InlineKeyboardButton("DataBase", url=f'https://t.me/{SUPPORT_CHAT}')],
+             InlineKeyboardButton("Support", url=f'https://t.me/{SUPPORT_CHAT}')],
             
         ]
         
