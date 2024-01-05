@@ -43,13 +43,13 @@ async def get_user_info(user, already=False):
         total_users = await user_collection.count_documents({})  # Count total users
         global_rank_ratio = f"{global_rank}/{total_users}"
         info_text = (
-            f"𝗨𝘀𝗲𝗿𝘀 𝗣𝗿𝗼𝗳𝗶𝗹𝗲 ▰▱▰▱▰▱▰▱▰▱▰▱▰\n"
-            f"➡ **ID**: `{user_id}`\n"
-            f"➡ **Name**: {first_name}\n"
-            f"➡ **Username**: @{username}\n"
-            f"➡ **Characters Caught**: {caught_characters[0]}\n"
-            f"➡ **Progress Bar**: {progress_bar}\n"
-            f"➡ **Global Rank**: {global_rank_ratio}"
+            f"  ✨ 𝙐𝙎𝙀𝙍 𝙋𝙍𝙊𝙁𝙄𝙇𝙀 ✨\n"
+            f"───────────────────────\n"
+            f"🌸 𝙉𝘼𝙈𝙀 : {first_name}\n"
+            f"💮 𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 : @{username}\n"
+            f"🍀 𝘾𝙃𝘼𝙍𝘼𝘾𝙏𝙀𝙍𝙎 𝘾𝘼𝙐𝙂𝙃𝙏 : {caught_characters[0]}\n"
+            f"⚜️ 𝙋𝙍𝙊𝙂𝙍𝙀𝙎𝙎 𝘽𝘼𝙍: {progress_bar}\n"
+            f"🍥 𝙂𝙇𝙊𝘽𝘼𝙇 𝙍𝘼𝙉𝙆 : {global_rank_ratio}"
         )
      
     return [info_text, photo_id]
@@ -66,7 +66,7 @@ async def info_func(_, message: Message):
         info_text, photo_id = await get_user_info(user)
     except Exception as e:
         print(f"kela hua kela {e}")
-        return await m.edit("𝙎𝙤𝙧𝙧𝙮 𝙨𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙒𝙚𝙣𝙩 𝙒𝙧𝙤𝙣𝙜 𝙍𝙚𝙥𝙤𝙧𝙩 𝘼𝙩 @Grabers_World")
+        return await m.edit("𝙎𝙤𝙧𝙧𝙮 𝙨𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙒𝙚𝙣𝙩 𝙒𝙧𝙤𝙣𝙜")
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("sᴇᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ", switch_inline_query_current_chat=f"collection.{user}")],
         [InlineKeyboardButton("🚮", callback_data="delete_message")]
