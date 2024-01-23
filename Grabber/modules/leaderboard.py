@@ -11,7 +11,7 @@ from Grabber import (application, PHOTO_URL, OWNER_ID,
 
 from Grabber import sudo_users as SUDO_USERS 
 
-photo = ["https://graph.org/file/dde34765509593df9cd53.jpg"]
+photo = random.choice(PHOTO_URL)
     
 async def global_leaderboard(update: Update, context: CallbackContext) -> None:
     
