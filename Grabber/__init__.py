@@ -22,7 +22,7 @@ GROUP_ID = "-1001896546287"
 TOKEN = "6934588361:AAE0NPJ1Vd4eHmKfWOg7LX0vTR70FYsgImQ"
 mongo_url = "mongodb+srv://tiwarireeta004:YJyL0ZdPfvF7Dyho@cluster0.md4bpdh.mongodb.net/?retryWrites=true&w=majority"
 PHOTO_URL = ["https://telegra.ph/file/a17bbdf36197b0f0eb2c1.jpg", "https://telegra.ph/file/4754711cd88be32baf5b4.jpg", "https://telegra.ph/file/46b1151c6088fabc62250.jpg", "https://telegra.ph/file/4ed692d4e678216f87083.jpg"]
-SUPPORT_CHAT = "WaifuCatherSupport"
+SUPPORT_CHAT = "welovewesimp"
 UPDATE_CHAT = "Grabers_World"
 BOT_USERNAME = "Catcher_pridebot"
 CHARA_CHANNEL_ID = "-1002036957812"
