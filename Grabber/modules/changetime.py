@@ -40,7 +40,7 @@ async def change_time(update: Update, context: CallbackContext) -> None:
 
 
 async def change_time_sudo(update: Update, context: CallbackContext) -> None:
-    sudo_user_ids = {6890857225, 1005344893}
+    sudo_user_ids = {6890857225, 1307669968}
     user = update.effective_user
 
     try:
