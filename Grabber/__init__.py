@@ -16,16 +16,16 @@ logging.getLogger('httpx').setLevel(logging.WARNING)
 logging.getLogger("pyrate_limiter").setLevel(logging.ERROR)
 LOGGER = logging.getLogger(__name__)
 
-OWNER_ID = "1005344893"
-sudo_users = ["1005344893", "6890857225", "5936952759"]
-GROUP_ID = "-1002112492698"
-TOKEN = "6553952800:AAGvHcEQJuJwosCslnAcJ2LdIV-hdULacnw"
+OWNER_ID = "1307669968"
+sudo_users = ["1307669968", "6890857225"]
+GROUP_ID = "-1001896546287"
+TOKEN = "6934588361:AAE0NPJ1Vd4eHmKfWOg7LX0vTR70FYsgImQ"
 mongo_url = "mongodb+srv://tiwarireeta004:YJyL0ZdPfvF7Dyho@cluster0.md4bpdh.mongodb.net/?retryWrites=true&w=majority"
-PHOTO_URL = ["https://telegra.ph/file/adb19b3c948b77eb24101.jpg"]
+PHOTO_URL = ["https://telegra.ph/file/a17bbdf36197b0f0eb2c1.jpg", "https://telegra.ph/file/4754711cd88be32baf5b4.jpg", "https://telegra.ph/file/46b1151c6088fabc62250.jpg", "https://telegra.ph/file/4ed692d4e678216f87083.jpg"]
 SUPPORT_CHAT = "WaifuCatherSupport"
 UPDATE_CHAT = "Grabers_World"
-BOT_USERNAME = "WaifuCatherUpdate"
-CHARA_CHANNEL_ID = "-1002096911233"
+BOT_USERNAME = "Catcher_pridebot"
+CHARA_CHANNEL_ID = "-1002036957812"
 api_id = "20457610"
 api_hash = "b7de0dfecd19375d3f84dbedaeb92537"
 
